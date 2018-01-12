@@ -9,13 +9,34 @@
     height: 100vh;
     width: 100vw;
     overflow: hidden;
+    z-index: -1;
 }
 
-#menuBar {
+.menuBar {
+    position: absolute;
     background-color: #FDFFFC;
     width: 80px;
     height: 100vh;
     opacity: .8;
+    text-align: center;
+    z-index: 2;
+}
+.menuBar:hover{
+    padding: 0px 20px;
+    width: 300px;
+    text-align: left;
+}
+
+#menuIconTop{
+    position: relative;
+    top: 0px;
+    margin: 10px 0px 0px 0px !Important;
+}
+
+#menuIconBottom{
+    position: relative;
+    top: Calc(90vh - 200px);
+    margin: 10px 0px 0px 0px !Important;
 }
 
 #foreground {
@@ -25,6 +46,7 @@
     top: 0px;
     left: 80px;
     overflow-y: scroll;
+    z-index: 0;
 }
 
 .box {
@@ -40,3 +62,9 @@
     color: #212121 !Important;
     padding: 10px;
 }
+
+#month-and-year{
+    text-align: center;
+    width: 100%;
+}
+

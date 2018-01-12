@@ -39,7 +39,7 @@
 
 .datepicker .calendar .calendar-nav {
   align-items: center;
-  background: #00d1b2;
+  background: #D7263D;
   color: white;
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
@@ -89,7 +89,7 @@
 }
 
 .datepicker .calendar .calendar-header {
-  background: #00b89c;
+  background: #F46036;
   color: #fff;
   font-size: 0.75rem;
 }
@@ -126,8 +126,8 @@
 
 .datepicker .calendar .calendar-date .date-item.is-today {
   background: transparent;
-  border-color: #00d1b2;
-  color: #00d1b2;
+  border-color: #D7263D;
+  color: #D7263D;
 }
 
 .datepicker .calendar .calendar-date .date-item:focus {
@@ -145,8 +145,8 @@
 }
 
 .datepicker .calendar .calendar-date .date-item.is-active {
-  background: #00d1b2;
-  border-color: #00d1b2;
+  background: #D7263D;
+  border-color: #D7263D;
   color: #fff;
 }
 
@@ -180,7 +180,7 @@
 }
 
 .datepicker .calendar .calendar-range .date-item {
-  color: #00d1b2;
+  color: #D7263D;
 }
 
 .datepicker .calendar.is-large {
@@ -267,7 +267,7 @@
 }
 
 .datepicker .calendar.is-large .calendar-event.is-primary {
-  background-color: #00d1b2;
+  background-color: #D7263D;
   color: #fff;
 }
 
@@ -312,7 +312,7 @@
 
 .calendar .calendar-nav {
   align-items: center;
-  background: #00d1b2;
+  background: #D7263D;
   color: white;
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
@@ -362,7 +362,7 @@
 }
 
 .calendar .calendar-header {
-  background: #00b89c;
+  background: #F46036;
   color: #fff;
   font-size: 0.75rem;
 }
@@ -399,8 +399,8 @@
 
 .calendar .calendar-date .date-item.is-today {
   background: transparent;
-  border-color: #00d1b2;
-  color: #00d1b2;
+  border-color: #D7263D;
+  color: #D7263D;
 }
 
 .calendar .calendar-date .date-item:focus {
@@ -418,8 +418,8 @@
 }
 
 .calendar .calendar-date .date-item.is-active {
-  background: #00d1b2;
-  border-color: #00d1b2;
+  background: #D7263D;
+  border-color: #D7263D;
   color: #fff;
 }
 
@@ -453,7 +453,7 @@
 }
 
 .calendar .calendar-range .date-item {
-  color: #00d1b2;
+  color: #D7263D;
 }
 
 .calendar.is-large {
@@ -540,7 +540,7 @@
 }
 
 .calendar.is-large .calendar-event.is-primary {
-  background-color: #00d1b2;
+  background-color: #D7263D;
   color: #fff;
 }
 

@@ -23,18 +23,21 @@
                 }
             }
             setInterval(clock, 1000);
-            
-            document.addEventListener( 'DOMContentLoaded', function () {
-                var datePicker = new DatePicker( document.getElementById( 'datepickerDemo' ), {} );
-                var datePicker = new DatePicker( document.getElementById( 'datepickerDemo2' ), {
-                    overlay: true
-                } );
-            } );
         </script>
     </head>
     <body>
         <div id="background">
-            <div id="menuBar">
+            <div class="menuBar">
+                <span class="icon is-large" id="menuIconTop">
+                    <i class="fa fa-th-large fa-2x"></i>
+                </span>
+                <p class="title is-7">Dashboard</p>
+                <span class="icon is-large" id="menuIconBottom">
+                    <i class="fa fa-user-circle fa-2x"></i>
+                </span>
+                <span class="icon is-large" id="menuIconBottom">
+                    <i class="fa fa-cog fa-2x"></i>
+                </span>
             </div>
             <div id="foreground">
                 <div class="tile is-ancestor">
@@ -43,6 +46,7 @@
                             <div class="tile is-parent is-vertical">
                                 <article class="tile is-child box">
                                     <p class="title">Date & Time:</p>
+                                    <div class="title is-5" id="weekday"></div>
                                     <div class="subtitle is-1" id="clock"></div>
                                 </article>
                                 <article class="tile is-child box">
@@ -76,18 +80,22 @@
                                     <p class="title">Calendar:</p>
                                     <div class="calendar">
                                         <div class="calendar-nav">
+                                            <!--
                                             <div class="calendar-nav-left">
                                                 <button class="button is-text">
                                                     <i class="fa fa-chevron-left"></i>
-                                                  </button>
-                                                </div>
-                                                <div>March 2017</div>
-                                                <div class="calendar-nav-right">
-                                                  <button class="button is-text">
+                                                </button>
+                                            </div>
+                                            -->
+                                            <p id="month-and-year"></p>
+                                            <!--
+                                            <div class="calendar-nav-right">
+                                                <button class="button is-text">
                                                     <i class="fa fa-chevron-right"></i>
-                                                  </button>
-                                                </div>
-                                              </div>
+                                                </button>
+                                            </div>
+                                            -->
+                                        </div>
                                               <div class="calendar-container">
                                                 <div class="calendar-header">
                                                   <div class="calendar-date">Sun</div>
@@ -99,41 +107,41 @@
                                                   <div class="calendar-date">Sat</div>
                                                 </div>
                                                 <div class="calendar-body">
-                                                  <div class="calendar-date is-disabled"><button class="date-item">26</button></div>
-                                                  <div class="calendar-date is-disabled"><button class="date-item">27</button></div>
-                                                  <div class="calendar-date is-disabled"><button class="date-item">28</button></div>
-                                                  <div class="calendar-date"><button class="date-item">1</button></div>
-                                                  <div class="calendar-date"><button class="date-item">2</button></div>
-                                                  <div class="calendar-date"><button class="date-item">3</button></div>
-                                                  <div class="calendar-date tooltip" data-tooltip="Today"><button class="date-item is-today">4</button></div>
-                                                  <div class="calendar-date tooltip" data-tooltip="Not available" disabled=""><button class="date-item">5</button></div>
-                                                  <div class="calendar-date"><button class="date-item">6</button></div>
-                                                  <div class="calendar-date"><button class="date-item">7</button></div>
-                                                  <div class="calendar-date tooltip" data-tooltip="You have appointments"><button class="date-item">8</button></div>
-                                                  <div class="calendar-date"><button class="date-item">9</button></div>
-                                                  <div class="calendar-date"><button class="date-item">10</button></div>
-                                                  <div class="calendar-date"><button class="date-item">11</button></div>
-                                                  <div class="calendar-date"><button class="date-item">12</button></div>
-                                                  <div class="calendar-date"><button class="date-item">13</button></div>
-                                                  <div class="calendar-date"><button class="date-item">14</button></div>
-                                                  <div class="calendar-date"><button class="date-item">15</button></div>
-                                                  <div class="calendar-date calendar-range range-start"><button class="date-item is-active">16</button></div>
-                                                  <div class="calendar-date calendar-range"><button class="date-item">17</button></div>
-                                                  <div class="calendar-date calendar-range"><button class="date-item">18</button></div>
-                                                  <div class="calendar-date calendar-range"><button class="date-item">19</button></div>
-                                                  <div class="calendar-date calendar-range range-end"><button class="date-item is-active">20</button></div>
-                                                  <div class="calendar-date"><button class="date-item">21</button></div>
-                                                  <div class="calendar-date"><button class="date-item">22</button></div>
-                                                  <div class="calendar-date"><button class="date-item">23</button></div>
-                                                  <div class="calendar-date"><button class="date-item">24</button></div>
-                                                  <div class="calendar-date"><button class="date-item">25</button></div>
-                                                  <div class="calendar-date"><button class="date-item">26</button></div>
-                                                  <div class="calendar-date"><button class="date-item">27</button></div>
-                                                  <div class="calendar-date"><button class="date-item">28</button></div>
-                                                  <div class="calendar-date"><button class="date-item">29</button></div>
-                                                  <div class="calendar-date"><button class="date-item">30</button></div>
-                                                  <div class="calendar-date"><button class="date-item">31</button></div>
-                                                  <div class="calendar-date is-disabled"><button class="date-item">1</button></div>
+                                                  <div class="calendar-date" id="0"><button class="date-item" id="00"></button></div>
+                                                  <div class="calendar-date" id="1"><button class="date-item" id="10"></button></div>
+                                                  <div class="calendar-date" id="2"><button class="date-item" id="20"></button></div>
+                                                  <div class="calendar-date" id="3"><button class="date-item" id="30"></button></div>
+                                                  <div class="calendar-date" id="4"><button class="date-item" id="40"></button></div>
+                                                  <div class="calendar-date" id="5"><button class="date-item" id="50"></button></div>
+                                                  <div class="calendar-date" id="6"><button class="date-item" id="60"></button></div>
+                                                  <div class="calendar-date" id="7"><button class="date-item" id="70"></button></div>
+                                                  <div class="calendar-date" id="8"><button class="date-item" id="80"></button></div>
+                                                  <div class="calendar-date" id="9"><button class="date-item" id="90"></button></div>
+                                                  <div class="calendar-date" id="10"><button class="date-item" id="100"></button></div>
+                                                  <div class="calendar-date" id="11"><button class="date-item" id="110"></button></div>
+                                                  <div class="calendar-date" id="12"><button class="date-item" id="120"></button></div>
+                                                  <div class="calendar-date" id="13"><button class="date-item" id="130"></button></div>
+                                                  <div class="calendar-date" id="14"><button class="date-item" id="140"></button></div>
+                                                  <div class="calendar-date" id="15"><button class="date-item" id="150"></button></div>
+                                                  <div class="calendar-date" id="16"><button class="date-item" id="160"></button></div>
+                                                  <div class="calendar-date" id="17"><button class="date-item" id="170"></button></div>
+                                                  <div class="calendar-date" id="18"><button class="date-item" id="180"></button></div>
+                                                  <div class="calendar-date" id="19"><button class="date-item" id="190"></button></div>
+                                                  <div class="calendar-date" id="20"><button class="date-item" id="200"></button></div>
+                                                  <div class="calendar-date" id="21"><button class="date-item" id="210"></button></div>
+                                                  <div class="calendar-date" id="22"><button class="date-item" id="220"></button></div>
+                                                  <div class="calendar-date" id="23"><button class="date-item" id="230"></button></div>
+                                                  <div class="calendar-date" id="24"><button class="date-item" id="240"></button></div>
+                                                  <div class="calendar-date" id="25"><button class="date-item" id="250"></button></div>
+                                                  <div class="calendar-date" id="26"><button class="date-item" id="260"></button></div>
+                                                  <div class="calendar-date" id="27"><button class="date-item" id="270"></button></div>
+                                                  <div class="calendar-date" id="28"><button class="date-item" id="280"></button></div>
+                                                  <div class="calendar-date" id="29"><button class="date-item" id="290"></button></div>
+                                                  <div class="calendar-date" id="30"><button class="date-item" id="300"></button></div>
+                                                  <div class="calendar-date" id="31"><button class="date-item" id="310"></button></div>
+                                                  <div class="calendar-date" id="32"><button class="date-item" id="320"></button></div>
+                                                  <div class="calendar-date" id="33"><button class="date-item" id="330"></button></div>
+                                                  <div class="calendar-date" id="34"><button class="date-item" id="340"></button></div>
                                                 </div>
                                               </div>
                                             </div>
@@ -148,11 +156,60 @@
                     </div>
                     <div class="tile is-parent">
                         <article class="tile is-child box">
-                            This will be something else. Who knows.
+                            <p class="title">Reminders:</p>
+                            
                         </article>
                     </div>
                 </div>
             </div>
         </div>
+        <script>
+            function setDate(){
+                
+                var monthNames = ["January", "February", "March", "April", "May", "June",
+                                "July", "August", "September", "October", "November", "December"
+                             ];
+                var monthDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+                var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                
+                var d = new Date();
+                var month = d.getMonth();
+                var year = d.getFullYear();
+                var day = dayNames[d.getDay()];
+                var dayNum = d.getDate();
+                document.getElementById('month-and-year').innerHTML = monthNames[month] + " " + dayNum + ", "+ year;
+                document.getElementById('weekday').innerHTML = day;
+                
+                var first = d.getDay() - dayNum%7 + 1;
+                
+                var leapYear = ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0);
+                
+                var currMonth = false;
+                var dayOfMonth = 1;
+                for(i = 0; i < 35; i++){
+                    if(i == first){
+                        currMonth = true;
+                    }
+                    if(i > monthDays[month]){
+                        if((month == 2) && leapYear){
+                            
+                        }
+                        currMonth = false;
+                    }
+                    if(!currMonth){
+                        document.getElementById(i).classList.add('is-disabled')
+                    } else {
+                        document.getElementById(i*10).innerHTML = dayOfMonth;
+                        if(dayOfMonth == dayNum){
+                            document.getElementById(i*10).classList.add('is-today');
+                        }
+                        dayOfMonth++;
+                    }
+                    
+                }
+            }
+            
+            setDate()
+        </script>
     </body>
 </html>
