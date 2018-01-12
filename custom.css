@@ -17,14 +17,16 @@
     background-color: #FDFFFC;
     width: 80px;
     height: 100vh;
-    opacity: .8;
+    opacity: 0.8;
     text-align: center;
     z-index: 2;
+    transition: all .5s ease;
 }
 .menuBar:hover{
     padding: 0px 20px;
     width: 300px;
     text-align: left;
+    box-shadow: 
 }
 
 #menuIconTop{
