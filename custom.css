@@ -1,0 +1,42 @@
+#background {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f46036+0,d7263d+50,2e294e+100 */
+    background: #f46036; /* Old browsers */
+    background: -moz-linear-gradient(45deg, #f46036 0%, #d7263d 50%, #2e294e 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, #f46036 0%,#d7263d 50%,#2e294e 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg, #f46036 0%,#d7263d 50%,#2e294e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f46036', endColorstr='#2e294e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+#menuBar {
+    background-color: #FDFFFC;
+    width: 80px;
+    height: 100vh;
+    opacity: .8;
+}
+
+#foreground {
+    width: Calc(100vw - 80px);
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    left: 80px;
+    overflow-y: scroll;
+}
+
+.box {
+    background-color: rgba(253, 255, 252, .8);
+    color: #212121;
+}
+
+.is-ancestor{
+    padding: 20px;
+}
+
+.social-icon{
+    color: #212121 !Important;
+    padding: 10px;
+}

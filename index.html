@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dashboard</title>
+        <link rel="stylesheet" href="bulma.css">
+        <link rel="stylesheet" href="custom.css">
+        <link rel="stylesheet" href="bulma-calendar.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script>
+            function clock() {// We create a new Date object and assign it to a variable called "time".
+                var time = new Date(),
+                    // Access the "getHours" method on the Date object with the dot accessor.
+                    hours = time.getHours(),
+                    // Access the "getMinutes" method with the dot accessor.
+                    minutes = time.getMinutes(),
+                    seconds = time.getSeconds();
+                document.querySelectorAll('#clock')[0].innerHTML = harold(hours)%12 + ":" + harold(minutes) + ":" + harold(seconds);
+                function harold(standIn) {
+                    if (standIn < 10) {
+                        standIn = '0' + standIn
+                    }
+                    return standIn;
+                }
+            }
+            setInterval(clock, 1000);
+            
+            document.addEventListener( 'DOMContentLoaded', function () {
+                var datePicker = new DatePicker( document.getElementById( 'datepickerDemo' ), {} );
+                var datePicker = new DatePicker( document.getElementById( 'datepickerDemo2' ), {
+                    overlay: true
+                } );
+            } );
+        </script>
+    </head>
+    <body>
+        <div id="background">
+            <div id="menuBar">
+            </div>
+            <div id="foreground">
+                <div class="tile is-ancestor">
+                    <div class="tile is-vertical is-8">
+                        <div class="tile">
+                            <div class="tile is-parent is-vertical">
+                                <article class="tile is-child box">
+                                    <p class="title">Date & Time:</p>
+                                    <div class="subtitle is-1" id="clock"></div>
+                                </article>
+                                <article class="tile is-child box">
+                                    <p class="title">Social:</p>
+                                    <div class="buttons is-centered">
+                                        <a href="" class="social-icon">
+                                            <span class="icon is-large">
+                                                <i class="fa fa-instagram fa-3x"></i>
+                                            </span>
+                                        </a>
+                                        <a href="" class="social-icon">
+                                            <span class="icon is-large">
+                                                <i class="fa fa-linkedin fa-3x"></i>
+                                            </span>
+                                        </a>
+                                        <a href="" class="social-icon">
+                                            <span class="icon is-large">
+                                                <i class="fa fa-github fa-3x"></i>
+                                            </span>
+                                        </a>
+                                        <a href="" class="social-icon">
+                                            <span class="icon is-large">
+                                                <i class="fa fa-codepen fa-3x"></i>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="tile is-parent">
+                                <article class="tile is-child box">
+                                    <p class="title">Calendar:</p>
+                                    <div class="calendar">
+                                        <div class="calendar-nav">
+                                            <div class="calendar-nav-left">
+                                                <button class="button is-text">
+                                                    <i class="fa fa-chevron-left"></i>
+                                                  </button>
+                                                </div>
+                                                <div>March 2017</div>
+                                                <div class="calendar-nav-right">
+                                                  <button class="button is-text">
+                                                    <i class="fa fa-chevron-right"></i>
+                                                  </button>
+                                                </div>
+                                              </div>
+                                              <div class="calendar-container">
+                                                <div class="calendar-header">
+                                                  <div class="calendar-date">Sun</div>
+                                                  <div class="calendar-date">Mon</div>
+                                                  <div class="calendar-date">Tue</div>
+                                                  <div class="calendar-date">Wed</div>
+                                                  <div class="calendar-date">Thu</div>
+                                                  <div class="calendar-date">Fri</div>
+                                                  <div class="calendar-date">Sat</div>
+                                                </div>
+                                                <div class="calendar-body">
+                                                  <div class="calendar-date is-disabled"><button class="date-item">26</button></div>
+                                                  <div class="calendar-date is-disabled"><button class="date-item">27</button></div>
+                                                  <div class="calendar-date is-disabled"><button class="date-item">28</button></div>
+                                                  <div class="calendar-date"><button class="date-item">1</button></div>
+                                                  <div class="calendar-date"><button class="date-item">2</button></div>
+                                                  <div class="calendar-date"><button class="date-item">3</button></div>
+                                                  <div class="calendar-date tooltip" data-tooltip="Today"><button class="date-item is-today">4</button></div>
+                                                  <div class="calendar-date tooltip" data-tooltip="Not available" disabled=""><button class="date-item">5</button></div>
+                                                  <div class="calendar-date"><button class="date-item">6</button></div>
+                                                  <div class="calendar-date"><button class="date-item">7</button></div>
+                                                  <div class="calendar-date tooltip" data-tooltip="You have appointments"><button class="date-item">8</button></div>
+                                                  <div class="calendar-date"><button class="date-item">9</button></div>
+                                                  <div class="calendar-date"><button class="date-item">10</button></div>
+                                                  <div class="calendar-date"><button class="date-item">11</button></div>
+                                                  <div class="calendar-date"><button class="date-item">12</button></div>
+                                                  <div class="calendar-date"><button class="date-item">13</button></div>
+                                                  <div class="calendar-date"><button class="date-item">14</button></div>
+                                                  <div class="calendar-date"><button class="date-item">15</button></div>
+                                                  <div class="calendar-date calendar-range range-start"><button class="date-item is-active">16</button></div>
+                                                  <div class="calendar-date calendar-range"><button class="date-item">17</button></div>
+                                                  <div class="calendar-date calendar-range"><button class="date-item">18</button></div>
+                                                  <div class="calendar-date calendar-range"><button class="date-item">19</button></div>
+                                                  <div class="calendar-date calendar-range range-end"><button class="date-item is-active">20</button></div>
+                                                  <div class="calendar-date"><button class="date-item">21</button></div>
+                                                  <div class="calendar-date"><button class="date-item">22</button></div>
+                                                  <div class="calendar-date"><button class="date-item">23</button></div>
+                                                  <div class="calendar-date"><button class="date-item">24</button></div>
+                                                  <div class="calendar-date"><button class="date-item">25</button></div>
+                                                  <div class="calendar-date"><button class="date-item">26</button></div>
+                                                  <div class="calendar-date"><button class="date-item">27</button></div>
+                                                  <div class="calendar-date"><button class="date-item">28</button></div>
+                                                  <div class="calendar-date"><button class="date-item">29</button></div>
+                                                  <div class="calendar-date"><button class="date-item">30</button></div>
+                                                  <div class="calendar-date"><button class="date-item">31</button></div>
+                                                  <div class="calendar-date is-disabled"><button class="date-item">1</button></div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="tile is-parent">
+                            <article class="tile is-child box">
+                                I don't know what I'll put here.
+                            </article>
+                        </div>
+                    </div>
+                    <div class="tile is-parent">
+                        <article class="tile is-child box">
+                            This will be something else. Who knows.
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
