@@ -1,4 +1,4 @@
-var lockedDown = false;
+var lockedDown = true;
 function toggleLock(){
     if(lockedDown){
         document.getElementById('foreground').classList.remove('locked');
