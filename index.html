@@ -6,7 +6,9 @@
         <link rel="stylesheet" href="custom.css">
         <link rel="stylesheet" href="bulma-calendar.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="github-calendar.css"/>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.min.js"></script>
         <script type="text/javascript" src="controller.js"></script>
         <script>
             
@@ -91,10 +93,10 @@
                             <div class="tile is-parent">
                                 <article class="tile is-child box" id="tile">
                                     <p class="title">Calendar:</p>
-                                    <div class="calendar">
-                                        <div class="calendar-nav">
+                                    <div class="bulmaCal">
+                                        <div class="bulmaCal-nav">
                                             <!--
-                                            <div class="calendar-nav-left">
+                                            <div class="bulmaCal-nav-left">
                                                 <button class="button is-text">
                                                     <i class="fa fa-chevron-left"></i>
                                                 </button>
@@ -102,59 +104,59 @@
                                             -->
                                             <p id="month-and-year"></p>
                                             <!--
-                                            <div class="calendar-nav-right">
+                                            <div class="bulmaCal-nav-right">
                                                 <button class="button is-text">
                                                     <i class="fa fa-chevron-right"></i>
                                                 </button>
                                             </div>
                                             -->
                                         </div>
-                                              <div class="calendar-container">
-                                                <div class="calendar-header">
-                                                  <div class="calendar-date">Sun</div>
-                                                  <div class="calendar-date">Mon</div>
-                                                  <div class="calendar-date">Tue</div>
-                                                  <div class="calendar-date">Wed</div>
-                                                  <div class="calendar-date">Thu</div>
-                                                  <div class="calendar-date">Fri</div>
-                                                  <div class="calendar-date">Sat</div>
+                                              <div class="bulmaCal-container">
+                                                <div class="bulmaCal-header">
+                                                  <div class="bulmaCal-date">Sun</div>
+                                                  <div class="bulmaCal-date">Mon</div>
+                                                  <div class="bulmaCal-date">Tue</div>
+                                                  <div class="bulmaCal-date">Wed</div>
+                                                  <div class="bulmaCal-date">Thu</div>
+                                                  <div class="bulmaCal-date">Fri</div>
+                                                  <div class="bulmaCal-date">Sat</div>
                                                 </div>
-                                                <div class="calendar-body">
-                                                  <div class="calendar-date" id="0"><button class="date-item" id="00"></button></div>
-                                                  <div class="calendar-date" id="1"><button class="date-item" id="10"></button></div>
-                                                  <div class="calendar-date" id="2"><button class="date-item" id="20"></button></div>
-                                                  <div class="calendar-date" id="3"><button class="date-item" id="30"></button></div>
-                                                  <div class="calendar-date" id="4"><button class="date-item" id="40"></button></div>
-                                                  <div class="calendar-date" id="5"><button class="date-item" id="50"></button></div>
-                                                  <div class="calendar-date" id="6"><button class="date-item" id="60"></button></div>
-                                                  <div class="calendar-date" id="7"><button class="date-item" id="70"></button></div>
-                                                  <div class="calendar-date" id="8"><button class="date-item" id="80"></button></div>
-                                                  <div class="calendar-date" id="9"><button class="date-item" id="90"></button></div>
-                                                  <div class="calendar-date" id="10"><button class="date-item" id="100"></button></div>
-                                                  <div class="calendar-date" id="11"><button class="date-item" id="110"></button></div>
-                                                  <div class="calendar-date" id="12"><button class="date-item" id="120"></button></div>
-                                                  <div class="calendar-date" id="13"><button class="date-item" id="130"></button></div>
-                                                  <div class="calendar-date" id="14"><button class="date-item" id="140"></button></div>
-                                                  <div class="calendar-date" id="15"><button class="date-item" id="150"></button></div>
-                                                  <div class="calendar-date" id="16"><button class="date-item" id="160"></button></div>
-                                                  <div class="calendar-date" id="17"><button class="date-item" id="170"></button></div>
-                                                  <div class="calendar-date" id="18"><button class="date-item" id="180"></button></div>
-                                                  <div class="calendar-date" id="19"><button class="date-item" id="190"></button></div>
-                                                  <div class="calendar-date" id="20"><button class="date-item" id="200"></button></div>
-                                                  <div class="calendar-date" id="21"><button class="date-item" id="210"></button></div>
-                                                  <div class="calendar-date" id="22"><button class="date-item" id="220"></button></div>
-                                                  <div class="calendar-date" id="23"><button class="date-item" id="230"></button></div>
-                                                  <div class="calendar-date" id="24"><button class="date-item" id="240"></button></div>
-                                                  <div class="calendar-date" id="25"><button class="date-item" id="250"></button></div>
-                                                  <div class="calendar-date" id="26"><button class="date-item" id="260"></button></div>
-                                                  <div class="calendar-date" id="27"><button class="date-item" id="270"></button></div>
-                                                  <div class="calendar-date" id="28"><button class="date-item" id="280"></button></div>
-                                                  <div class="calendar-date" id="29"><button class="date-item" id="290"></button></div>
-                                                  <div class="calendar-date" id="30"><button class="date-item" id="300"></button></div>
-                                                  <div class="calendar-date" id="31"><button class="date-item" id="310"></button></div>
-                                                  <div class="calendar-date" id="32"><button class="date-item" id="320"></button></div>
-                                                  <div class="calendar-date" id="33"><button class="date-item" id="330"></button></div>
-                                                  <div class="calendar-date" id="34"><button class="date-item" id="340"></button></div>
+                                                <div class="bulmaCal-body">
+                                                  <div class="bulmaCal-date" id="0"><button class="date-item" id="00"></button></div>
+                                                  <div class="bulmaCal-date" id="1"><button class="date-item" id="10"></button></div>
+                                                  <div class="bulmaCal-date" id="2"><button class="date-item" id="20"></button></div>
+                                                  <div class="bulmaCal-date" id="3"><button class="date-item" id="30"></button></div>
+                                                  <div class="bulmaCal-date" id="4"><button class="date-item" id="40"></button></div>
+                                                  <div class="bulmaCal-date" id="5"><button class="date-item" id="50"></button></div>
+                                                  <div class="bulmaCal-date" id="6"><button class="date-item" id="60"></button></div>
+                                                  <div class="bulmaCal-date" id="7"><button class="date-item" id="70"></button></div>
+                                                  <div class="bulmaCal-date" id="8"><button class="date-item" id="80"></button></div>
+                                                  <div class="bulmaCal-date" id="9"><button class="date-item" id="90"></button></div>
+                                                  <div class="bulmaCal-date" id="10"><button class="date-item" id="100"></button></div>
+                                                  <div class="bulmaCal-date" id="11"><button class="date-item" id="110"></button></div>
+                                                  <div class="bulmaCal-date" id="12"><button class="date-item" id="120"></button></div>
+                                                  <div class="bulmaCal-date" id="13"><button class="date-item" id="130"></button></div>
+                                                  <div class="bulmaCal-date" id="14"><button class="date-item" id="140"></button></div>
+                                                  <div class="bulmaCal-date" id="15"><button class="date-item" id="150"></button></div>
+                                                  <div class="bulmaCal-date" id="16"><button class="date-item" id="160"></button></div>
+                                                  <div class="bulmaCal-date" id="17"><button class="date-item" id="170"></button></div>
+                                                  <div class="bulmaCal-date" id="18"><button class="date-item" id="180"></button></div>
+                                                  <div class="bulmaCal-date" id="19"><button class="date-item" id="190"></button></div>
+                                                  <div class="bulmaCal-date" id="20"><button class="date-item" id="200"></button></div>
+                                                  <div class="bulmaCal-date" id="21"><button class="date-item" id="210"></button></div>
+                                                  <div class="bulmaCal-date" id="22"><button class="date-item" id="220"></button></div>
+                                                  <div class="bulmaCal-date" id="23"><button class="date-item" id="230"></button></div>
+                                                  <div class="bulmaCal-date" id="24"><button class="date-item" id="240"></button></div>
+                                                  <div class="bulmaCal-date" id="25"><button class="date-item" id="250"></button></div>
+                                                  <div class="bulmaCal-date" id="26"><button class="date-item" id="260"></button></div>
+                                                  <div class="bulmaCal-date" id="27"><button class="date-item" id="270"></button></div>
+                                                  <div class="bulmaCal-date" id="28"><button class="date-item" id="280"></button></div>
+                                                  <div class="bulmaCal-date" id="29"><button class="date-item" id="290"></button></div>
+                                                  <div class="bulmaCal-date" id="30"><button class="date-item" id="300"></button></div>
+                                                  <div class="bulmaCal-date" id="31"><button class="date-item" id="310"></button></div>
+                                                  <div class="bulmaCal-date" id="32"><button class="date-item" id="320"></button></div>
+                                                  <div class="bulmaCal-date" id="33"><button class="date-item" id="330"></button></div>
+                                                  <div class="bulmaCal-date" id="34"><button class="date-item" id="340"></button></div>
                                                 </div>
                                               </div>
                                             </div>
@@ -163,29 +165,41 @@
                         </div>
                         <div class="tile is-parent" id="tile">
                             <article class="tile is-child box">
-                                I don't know what I'll put here.
+                                <p class="title">GitHub Contributions:</p>
+                                <div class="calendar">
+                                    <!-- Loading stuff -->
+                                    Loading the data just for you.
+                                </div>
                             </article>
                         </div>
                     </div>
                     <div class="tile is-parent" id="tile">
                         <article class="tile is-child box">
-                            <div class="buttons" id="tool-buttons">
-                                <span class="icon">
-                                    <i class="fa fa-plus fa-1x"></i>
-                                </span>
-                                <span class="icon">
-                                    <i class="fa fa-edit fa-1x"></i>
-                                </span>
+                            <div class="tool-buttons">
+                                <a>
+                                    <span class="icon">
+                                        <i class="fa fa-plus fa-1x"></i>
+                                    </span>
+                                </a>
+                                <a>
+                                    <span class="icon">
+                                        <i class="fa fa-edit fa-1x"></i>
+                                    </span>
+                                </a>
                             </div>
                             <p class="title">Reminders:</p>
                             <div class="reminder-list">
                                 <article class="message is-dark">
                                     <div class="message-header">
-                                        <p>Dark</p>
-                                        <button class="delete" aria-label="delete"></button>
+                                        <p>Title</p>
+                                        <a class="button is-success is-small" onClick="">
+                                            <span class="icon is-small">
+                                                <i class="fa fa-check"></i>
+                                            </span>
+                                        </a>
                                     </div>
                                     <div class="message-body">
-                                        Sample Reminder Text.
+                                        Message pertaining to the reminder here.
                                     </div>
                                 </article>
                             </div>
@@ -258,6 +272,8 @@
             }
             
             setDate()
+            
+            GitHubCalendar(".calendar", "adamjbailey");
         </script>
     </body>
 </html>

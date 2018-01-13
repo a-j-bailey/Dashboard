@@ -15,15 +15,15 @@
   display: flex;
 }
 
-.datepicker.is-active .calendar {
+.datepicker.is-active .bulmaCal {
   min-width: 20rem;
   max-width: 20rem;
   position: relative;
   margin: 0 auto;
-  max-height: calc(100vh - 40px);
+  max-height: bulmaCalc(100vh - 40px);
 }
 
-.datepicker .calendar {
+.datepicker .bulmaCal {
   background: white;
   border: none;
   border-radius: 2px;
@@ -33,11 +33,11 @@
   max-width: 20rem;
 }
 
-.datepicker .calendar.is-active {
+.datepicker .bulmaCal.is-active {
   display: initial;
 }
 
-.datepicker .calendar .calendar-nav {
+.datepicker .bulmaCal .bulmaCal-nav {
   align-items: center;
   background: #D7263D;
   color: white;
@@ -50,61 +50,61 @@
   padding: .5rem;
 }
 
-.datepicker .calendar .calendar-nav .calendar-nav-left, .datepicker .calendar .calendar-nav .calendar-nav-right {
+.datepicker .bulmaCal .bulmaCal-nav .bulmaCal-nav-left, .datepicker .bulmaCal .bulmaCal-nav .bulmaCal-nav-right {
   flex-basis: auto;
   flex-grow: 0;
   flex-shrink: 0;
 }
 
-.datepicker .calendar .calendar-nav .calendar-nav-left .button, .datepicker .calendar .calendar-nav .calendar-nav-right .button {
+.datepicker .bulmaCal .bulmaCal-nav .bulmaCal-nav-left .button, .datepicker .bulmaCal .bulmaCal-nav .bulmaCal-nav-right .button {
   text-decoration: none;
   color: white;
 }
 
-.datepicker .calendar .calendar-nav .calendar-nav-left .button:hover, .datepicker .calendar .calendar-nav .calendar-nav-right .button:hover {
+.datepicker .bulmaCal .bulmaCal-nav .bulmaCal-nav-left .button:hover, .datepicker .bulmaCal .bulmaCal-nav .bulmaCal-nav-right .button:hover {
   background: transparent;
   color: whitesmoke;
 }
 
-.datepicker .calendar .calendar-nav .calendar-nav-left {
+.datepicker .bulmaCal .bulmaCal-nav .bulmaCal-nav-left {
   align-items: center;
   justify-content: flex-start;
 }
 
-.datepicker .calendar .calendar-nav .calendar-nav-right {
+.datepicker .bulmaCal .bulmaCal-nav .bulmaCal-nav-right {
   align-items: center;
   justify-content: flex-end;
 }
 
-.datepicker .calendar .calendar-header, .datepicker .calendar .calendar-body {
+.datepicker .bulmaCal .bulmaCal-header, .datepicker .bulmaCal .bulmaCal-body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding: .2rem 0;
 }
 
-.datepicker .calendar .calendar-header .calendar-date, .datepicker .calendar .calendar-body .calendar-date {
+.datepicker .bulmaCal .bulmaCal-header .bulmaCal-date, .datepicker .bulmaCal .bulmaCal-body .bulmaCal-date {
   flex: 0 0 14.28%;
   max-width: 14.28%;
 }
 
-.datepicker .calendar .calendar-header {
+.datepicker .bulmaCal .bulmaCal-header {
   background: #F46036;
   color: #fff;
   font-size: 0.75rem;
 }
 
-.datepicker .calendar .calendar-body {
+.datepicker .bulmaCal .bulmaCal-body {
   padding: 0;
   color: #7a7a7a;
 }
 
-.datepicker .calendar .calendar-date {
+.datepicker .bulmaCal .bulmaCal-date {
   border: 0;
   padding: .4rem;
 }
 
-.datepicker .calendar .calendar-date .date-item {
+.datepicker .bulmaCal .bulmaCal-date .date-item {
   appearance: none;
   background: transparent;
   border: .1rem solid transparent;
@@ -119,48 +119,48 @@
   text-align: center;
   text-decoration: none;
   transition: all .2s ease;
-  vertical-align: middle;
+  vertibulmaCal-align: middle;
   white-space: nowrap;
   width: 2.2rem;
 }
 
-.datepicker .calendar .calendar-date .date-item.is-today {
+.datepicker .bulmaCal .bulmaCal-date .date-item.is-today {
   background: transparent;
   border-color: #D7263D;
   color: #D7263D;
 }
 
-.datepicker .calendar .calendar-date .date-item:focus {
+.datepicker .bulmaCal .bulmaCal-date .date-item:focus {
   background: whitesmoke;
   border-color: whitesmoke;
   color: rgba(0, 0, 0, 0.7);
   text-decoration: none;
 }
 
-.datepicker .calendar .calendar-date .date-item:hover {
+.datepicker .bulmaCal .bulmaCal-date .date-item:hover {
   background: whitesmoke;
   border-color: whitesmoke;
   color: rgba(0, 0, 0, 0.7);
   text-decoration: none;
 }
 
-.datepicker .calendar .calendar-date .date-item.is-active {
+.datepicker .bulmaCal .bulmaCal-date .date-item.is-active {
   background: #D7263D;
   border-color: #D7263D;
   color: #fff;
 }
 
-.datepicker .calendar .calendar-date.is-disabled .date-item, .datepicker .calendar .calendar-date.is-disabled .calendar-event, .datepicker .calendar .calendar-date[disabled] .date-item, .datepicker .calendar .calendar-date[disabled] .calendar-event {
+.datepicker .bulmaCal .bulmaCal-date.is-disabled .date-item, .datepicker .bulmaCal .bulmaCal-date.is-disabled .bulmaCal-event, .datepicker .bulmaCal .bulmaCal-date[disabled] .date-item, .datepicker .bulmaCal .bulmaCal-date[disabled] .bulmaCal-event {
   cursor: default;
   opacity: .25;
   pointer-events: none;
 }
 
-.datepicker .calendar .calendar-range {
+.datepicker .bulmaCal .bulmaCal-range {
   position: relative;
 }
 
-.datepicker .calendar .calendar-range::before {
+.datepicker .bulmaCal .bulmaCal-range::before {
   background: #d1fff8;
   content: "";
   height: 2.2rem;
@@ -171,23 +171,23 @@
   transform: translateY(-50%);
 }
 
-.datepicker .calendar .calendar-range.range-start::before {
+.datepicker .bulmaCal .bulmaCal-range.range-start::before {
   left: 50%;
 }
 
-.datepicker .calendar .calendar-range.range-end::before {
+.datepicker .bulmaCal .bulmaCal-range.range-end::before {
   right: 50%;
 }
 
-.datepicker .calendar .calendar-range .date-item {
+.datepicker .bulmaCal .bulmaCal-range .date-item {
   color: #D7263D;
 }
 
-.datepicker .calendar.is-large {
+.datepicker .bulmaCal.is-large {
   max-width: 100%;
 }
 
-.datepicker .calendar.is-large .calendar-body .calendar-date {
+.datepicker .bulmaCal.is-large .bulmaCal-body .bulmaCal-date {
   border-bottom: none;
   border-right: none;
   display: flex;
@@ -196,42 +196,42 @@
   padding: 0;
 }
 
-.datepicker .calendar.is-large .calendar-body .calendar-date:nth-child(7n) {
+.datepicker .bulmaCal.is-large .bulmaCal-body .bulmaCal-date:nth-child(7n) {
   border-right: 0;
 }
 
-.datepicker .calendar.is-large .calendar-body .calendar-date:nth-last-child(-n+7) {
+.datepicker .bulmaCal.is-large .bulmaCal-body .bulmaCal-date:nth-last-child(-n+7) {
   border-bottom: 0;
 }
 
-.datepicker .calendar.is-large .date-item {
+.datepicker .bulmaCal.is-large .date-item {
   align-self: flex-end;
   height: 2.2rem;
   margin-right: .5rem;
   margin-top: .5rem;
 }
 
-.datepicker .calendar.is-large .calendar-range::before {
+.datepicker .bulmaCal.is-large .bulmaCal-range::before {
   top: 1.9rem;
 }
 
-.datepicker .calendar.is-large .calendar-range.range-start::before {
+.datepicker .bulmaCal.is-large .bulmaCal-range.range-start::before {
   left: auto;
   width: 1.9rem;
 }
 
-.datepicker .calendar.is-large .calendar-range.range-end::before {
+.datepicker .bulmaCal.is-large .bulmaCal-range.range-end::before {
   right: 1.9rem;
 }
 
-.datepicker .calendar.is-large .calendar-events {
+.datepicker .bulmaCal.is-large .bulmaCal-events {
   flex-grow: 1;
   line-height: 1;
   overflow-y: auto;
   padding: .5rem;
 }
 
-.datepicker .calendar.is-large .calendar-event {
+.datepicker .bulmaCal.is-large .bulmaCal-event {
   background-color: #7a7a7a;
   border-radius: 2px;
   color: white;
@@ -242,61 +242,61 @@
   padding: .3rem .4rem;
   text-align: left;
   text-overflow: ellipsis;
-  vertical-align: baseline;
+  vertibulmaCal-align: baseline;
   white-space: nowrap;
 }
 
-.datepicker .calendar.is-large .calendar-event.is-white {
+.datepicker .bulmaCal.is-large .bulmaCal-event.is-white {
   background-color: white;
   color: #0a0a0a;
 }
 
-.datepicker .calendar.is-large .calendar-event.is-black {
+.datepicker .bulmaCal.is-large .bulmaCal-event.is-black {
   background-color: #0a0a0a;
   color: white;
 }
 
-.datepicker .calendar.is-large .calendar-event.is-light {
+.datepicker .bulmaCal.is-large .bulmaCal-event.is-light {
   background-color: whitesmoke;
   color: #363636;
 }
 
-.datepicker .calendar.is-large .calendar-event.is-dark {
+.datepicker .bulmaCal.is-large .bulmaCal-event.is-dark {
   background-color: #363636;
   color: whitesmoke;
 }
 
-.datepicker .calendar.is-large .calendar-event.is-primary {
+.datepicker .bulmaCal.is-large .bulmaCal-event.is-primary {
   background-color: #D7263D;
   color: #fff;
 }
 
-.datepicker .calendar.is-large .calendar-event.is-link {
+.datepicker .bulmaCal.is-large .bulmaCal-event.is-link {
   background-color: #3273dc;
   color: #fff;
 }
 
-.datepicker .calendar.is-large .calendar-event.is-info {
+.datepicker .bulmaCal.is-large .bulmaCal-event.is-info {
   background-color: #209cee;
   color: #fff;
 }
 
-.datepicker .calendar.is-large .calendar-event.is-success {
+.datepicker .bulmaCal.is-large .bulmaCal-event.is-success {
   background-color: #23d160;
   color: #fff;
 }
 
-.datepicker .calendar.is-large .calendar-event.is-warning {
+.datepicker .bulmaCal.is-large .bulmaCal-event.is-warning {
   background-color: #ffdd57;
   color: rgba(0, 0, 0, 0.7);
 }
 
-.datepicker .calendar.is-large .calendar-event.is-danger {
+.datepicker .bulmaCal.is-large .bulmaCal-event.is-danger {
   background-color: #ff3860;
   color: #fff;
 }
 
-.calendar {
+.bulmaCal {
   background: white;
   border: none;
   border-radius: 2px;
@@ -307,11 +307,11 @@
   /*max-width: 20rem;*/
 }
 
-.calendar.is-active {
+.bulmaCal.is-active {
   display: initial;
 }
 
-.calendar .calendar-nav {
+.bulmaCal .bulmaCal-nav {
   align-items: center;
   background: #D7263D;
   color: white;
@@ -324,61 +324,61 @@
   padding: .5rem;
 }
 
-.calendar .calendar-nav .calendar-nav-left, .calendar .calendar-nav .calendar-nav-right {
+.bulmaCal .bulmaCal-nav .bulmaCal-nav-left, .bulmaCal .bulmaCal-nav .bulmaCal-nav-right {
   flex-basis: auto;
   flex-grow: 0;
   flex-shrink: 0;
 }
 
-.calendar .calendar-nav .calendar-nav-left .button, .calendar .calendar-nav .calendar-nav-right .button {
+.bulmaCal .bulmaCal-nav .bulmaCal-nav-left .button, .bulmaCal .bulmaCal-nav .bulmaCal-nav-right .button {
   text-decoration: none;
   color: white;
 }
 
-.calendar .calendar-nav .calendar-nav-left .button:hover, .calendar .calendar-nav .calendar-nav-right .button:hover {
+.bulmaCal .bulmaCal-nav .bulmaCal-nav-left .button:hover, .bulmaCal .bulmaCal-nav .bulmaCal-nav-right .button:hover {
   background: transparent;
   color: whitesmoke;
 }
 
-.calendar .calendar-nav .calendar-nav-left {
+.bulmaCal .bulmaCal-nav .bulmaCal-nav-left {
   align-items: center;
   justify-content: flex-start;
 }
 
-.calendar .calendar-nav .calendar-nav-right {
+.bulmaCal .bulmaCal-nav .bulmaCal-nav-right {
   align-items: center;
   justify-content: flex-end;
 }
 
-.calendar .calendar-header, .calendar .calendar-body {
+.bulmaCal .bulmaCal-header, .bulmaCal .bulmaCal-body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding: .2rem 0;
 }
 
-.calendar .calendar-header .calendar-date, .calendar .calendar-body .calendar-date {
+.bulmaCal .bulmaCal-header .bulmaCal-date, .bulmaCal .bulmaCal-body .bulmaCal-date {
   flex: 0 0 14.28%;
   max-width: 14.28%;
 }
 
-.calendar .calendar-header {
+.bulmaCal .bulmaCal-header {
   background: #F46036;
   color: #fff;
   font-size: 0.75rem;
 }
 
-.calendar .calendar-body {
+.bulmaCal .bulmaCal-body {
   padding: 0;
   color: #7a7a7a;
 }
 
-.calendar .calendar-date {
+.bulmaCal .bulmaCal-date {
   border: 0;
   padding: .4rem;
 }
 
-.calendar .calendar-date .date-item {
+.bulmaCal .bulmaCal-date .date-item {
   appearance: none;
   background: transparent;
   border: .1rem solid transparent;
@@ -393,48 +393,48 @@
   text-align: center;
   text-decoration: none;
   transition: all .2s ease;
-  vertical-align: middle;
+  vertibulmaCal-align: middle;
   white-space: nowrap;
   width: 2.2rem;
 }
 
-.calendar .calendar-date .date-item.is-today {
+.bulmaCal .bulmaCal-date .date-item.is-today {
   background: transparent;
   border-color: #D7263D;
   color: #D7263D;
 }
 
-.calendar .calendar-date .date-item:focus {
+.bulmaCal .bulmaCal-date .date-item:focus {
   background: whitesmoke;
   border-color: whitesmoke;
   color: rgba(0, 0, 0, 0.7);
   text-decoration: none;
 }
 
-.calendar .calendar-date .date-item:hover {
+.bulmaCal .bulmaCal-date .date-item:hover {
   background: whitesmoke;
   border-color: whitesmoke;
   color: rgba(0, 0, 0, 0.7);
   text-decoration: none;
 }
 
-.calendar .calendar-date .date-item.is-active {
+.bulmaCal .bulmaCal-date .date-item.is-active {
   background: #D7263D;
   border-color: #D7263D;
   color: #fff;
 }
 
-.calendar .calendar-date.is-disabled .date-item, .calendar .calendar-date.is-disabled .calendar-event, .calendar .calendar-date[disabled] .date-item, .calendar .calendar-date[disabled] .calendar-event {
+.bulmaCal .bulmaCal-date.is-disabled .date-item, .bulmaCal .bulmaCal-date.is-disabled .bulmaCal-event, .bulmaCal .bulmaCal-date[disabled] .date-item, .bulmaCal .bulmaCal-date[disabled] .bulmaCal-event {
   cursor: default;
   opacity: .25;
   pointer-events: none;
 }
 
-.calendar .calendar-range {
+.bulmaCal .bulmaCal-range {
   position: relative;
 }
 
-.calendar .calendar-range::before {
+.bulmaCal .bulmaCal-range::before {
   background: #d1fff8;
   content: "";
   height: 2.2rem;
@@ -445,23 +445,23 @@
   transform: translateY(-50%);
 }
 
-.calendar .calendar-range.range-start::before {
+.bulmaCal .bulmaCal-range.range-start::before {
   left: 50%;
 }
 
-.calendar .calendar-range.range-end::before {
+.bulmaCal .bulmaCal-range.range-end::before {
   right: 50%;
 }
 
-.calendar .calendar-range .date-item {
+.bulmaCal .bulmaCal-range .date-item {
   color: #D7263D;
 }
 
-.calendar.is-large {
+.bulmaCal.is-large {
   max-width: 100%;
 }
 
-.calendar.is-large .calendar-body .calendar-date {
+.bulmaCal.is-large .bulmaCal-body .bulmaCal-date {
   border-bottom: none;
   border-right: none;
   display: flex;
@@ -470,42 +470,42 @@
   padding: 0;
 }
 
-.calendar.is-large .calendar-body .calendar-date:nth-child(7n) {
+.bulmaCal.is-large .bulmaCal-body .bulmaCal-date:nth-child(7n) {
   border-right: 0;
 }
 
-.calendar.is-large .calendar-body .calendar-date:nth-last-child(-n+7) {
+.bulmaCal.is-large .bulmaCal-body .bulmaCal-date:nth-last-child(-n+7) {
   border-bottom: 0;
 }
 
-.calendar.is-large .date-item {
+.bulmaCal.is-large .date-item {
   align-self: flex-end;
   height: 2.2rem;
   margin-right: .5rem;
   margin-top: .5rem;
 }
 
-.calendar.is-large .calendar-range::before {
+.bulmaCal.is-large .bulmaCal-range::before {
   top: 1.9rem;
 }
 
-.calendar.is-large .calendar-range.range-start::before {
+.bulmaCal.is-large .bulmaCal-range.range-start::before {
   left: auto;
   width: 1.9rem;
 }
 
-.calendar.is-large .calendar-range.range-end::before {
+.bulmaCal.is-large .bulmaCal-range.range-end::before {
   right: 1.9rem;
 }
 
-.calendar.is-large .calendar-events {
+.bulmaCal.is-large .bulmaCal-events {
   flex-grow: 1;
   line-height: 1;
   overflow-y: auto;
   padding: .5rem;
 }
 
-.calendar.is-large .calendar-event {
+.bulmaCal.is-large .bulmaCal-event {
   background-color: #7a7a7a;
   border-radius: 2px;
   color: white;
@@ -516,56 +516,56 @@
   padding: .3rem .4rem;
   text-align: left;
   text-overflow: ellipsis;
-  vertical-align: baseline;
+  vertibulmaCal-align: baseline;
   white-space: nowrap;
 }
 
-.calendar.is-large .calendar-event.is-white {
+.bulmaCal.is-large .bulmaCal-event.is-white {
   background-color: white;
   color: #0a0a0a;
 }
 
-.calendar.is-large .calendar-event.is-black {
+.bulmaCal.is-large .bulmaCal-event.is-black {
   background-color: #0a0a0a;
   color: white;
 }
 
-.calendar.is-large .calendar-event.is-light {
+.bulmaCal.is-large .bulmaCal-event.is-light {
   background-color: whitesmoke;
   color: #363636;
 }
 
-.calendar.is-large .calendar-event.is-dark {
+.bulmaCal.is-large .bulmaCal-event.is-dark {
   background-color: #363636;
   color: whitesmoke;
 }
 
-.calendar.is-large .calendar-event.is-primary {
+.bulmaCal.is-large .bulmaCal-event.is-primary {
   background-color: #D7263D;
   color: #fff;
 }
 
-.calendar.is-large .calendar-event.is-link {
+.bulmaCal.is-large .bulmaCal-event.is-link {
   background-color: #3273dc;
   color: #fff;
 }
 
-.calendar.is-large .calendar-event.is-info {
+.bulmaCal.is-large .bulmaCal-event.is-info {
   background-color: #209cee;
   color: #fff;
 }
 
-.calendar.is-large .calendar-event.is-success {
+.bulmaCal.is-large .bulmaCal-event.is-success {
   background-color: #23d160;
   color: #fff;
 }
 
-.calendar.is-large .calendar-event.is-warning {
+.bulmaCal.is-large .bulmaCal-event.is-warning {
   background-color: #ffdd57;
   color: rgba(0, 0, 0, 0.7);
 }
 
-.calendar.is-large .calendar-event.is-danger {
+.bulmaCal.is-large .bulmaCal-event.is-danger {
   background-color: #ff3860;
   color: #fff;
 }

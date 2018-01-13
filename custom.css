@@ -2,6 +2,10 @@ body{
     background-color: #212121;
 }
 
+a{
+    color: #212121;
+}
+
 #background {
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f46036+0,d7263d+50,2e294e+100 */
     background: #f46036; /* Old browsers */
@@ -62,6 +66,7 @@ body{
     color: #212121;
     transition: all .5s ease;
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+    position: relative;
 }
 
 .social-icon{
@@ -134,6 +139,8 @@ body{
     transform: translate(0px, 15px);
 }
 
-#tool-buttons {
-    
+.tool-buttons {
+    position: absolute;
+    left: 85%;
+    top: 25px;
 }
