@@ -2,7 +2,7 @@
 #### Dashboard is a simple and straightforward organizational tool.
 It brings together your calendar, reminders, social media accounts, and currently shows GitHub contributions.
 
-### _Supported Features:_
+#### __Supported Features:__
 * Time
 * Social Media
 * Reminders
