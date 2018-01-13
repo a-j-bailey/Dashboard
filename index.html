@@ -6,7 +6,10 @@
         <link rel="stylesheet" href="custom.css">
         <link rel="stylesheet" href="bulma-calendar.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script type="text/javascript" src="controller.js"></script>
         <script>
+            
             function clock() {// We create a new Date object and assign it to a variable called "time".
                 var time = new Date(),
                     // Access the "getHours" method on the Date object with the dot accessor.
@@ -26,30 +29,36 @@
         </script>
     </head>
     <body>
+        <div class="lockdown">
+            <span class="icon is-large" onclick="toggleLock()">
+                <i class="fa fa-lock fa-3x"></i>
+            </span>
+        </div>
         <div id="background">
-            <div class="menuBar">
+            <div class="menuBar" id="menuBar">
                 <span class="icon is-large" id="menuIconTop">
                     <i class="fa fa-th-large fa-2x"></i>
                 </span>
-                <p class="title is-7">Dashboard</p>
-                <span class="icon is-large" id="menuIconBottom">
-                    <i class="fa fa-user-circle fa-2x"></i>
+                <p class="title is-7" id="dashboard">Dashboard</p>                
+                <span class="icon is-large" id="menuIconBottom" onclick="toggleLock()">
+                    <i class="fa fa-lock fa-2x"></i>
                 </span>
                 <span class="icon is-large" id="menuIconBottom">
                     <i class="fa fa-cog fa-2x"></i>
                 </span>
             </div>
             <div id="foreground">
+                <div class="title is-1" id="greeting">Hello Adam!</div>
                 <div class="tile is-ancestor">
                     <div class="tile is-vertical is-8">
                         <div class="tile">
                             <div class="tile is-parent is-vertical">
-                                <article class="tile is-child box">
+                                <article class="tile is-child box" id="tile">
                                     <p class="title">Date & Time:</p>
                                     <div class="title is-5" id="weekday"></div>
                                     <div class="subtitle is-1" id="clock"></div>
                                 </article>
-                                <article class="tile is-child box">
+                                <article class="tile is-child box" id="tile">
                                     <p class="title">Social:</p>
                                     <div class="buttons is-centered">
                                         <a href="" class="social-icon">
@@ -81,7 +90,7 @@
                                 </article>
                             </div>
                             <div class="tile is-parent">
-                                <article class="tile is-child box">
+                                <article class="tile is-child box" id="tile">
                                     <p class="title">Calendar:</p>
                                     <div class="calendar">
                                         <div class="calendar-nav">
@@ -153,13 +162,13 @@
                                 </article>
                             </div>
                         </div>
-                        <div class="tile is-parent">
+                        <div class="tile is-parent" id="tile">
                             <article class="tile is-child box">
                                 I don't know what I'll put here.
                             </article>
                         </div>
                     </div>
-                    <div class="tile is-parent">
+                    <div class="tile is-parent" id="tile">
                         <article class="tile is-child box">
                             <p class="title">Reminders:</p>
                             
@@ -169,6 +178,26 @@
             </div>
         </div>
         <script>
+            
+            
+            $("#menuBar").hover(
+                function(){
+                    $("#menuBar").addClass('menuBarHover');
+                    $("#dashboard").addClass('is-4');
+                    $("#dashboard").removeClass('is-7');
+                    $("article").addClass('fade');
+                    $("#greeting").addClass('fade');
+                },
+                function(){
+                    $("#menuBar").removeClass('menuBarHover');
+                    $("#dashboard").addClass('is-7');
+                    $("#dashboard").removeClass('is-4');
+                    $("article").removeClass('fade');
+                    $("#greeting").removeClass('fade');
+                }
+            );
+            
+            
             function setDate(){
                 
                 var monthNames = ["January", "February", "March", "April", "May", "June",
