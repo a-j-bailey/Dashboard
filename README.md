@@ -5,9 +5,6 @@ It brings together your calendar, reminders, social media accounts, and currentl
 ### _Supported Features:_
 * Time
 * Social Media
-..* Instagram
-..* Facebook
-..* Twitter
 * Reminders
 * Calendar
 * GitHub Contributions
