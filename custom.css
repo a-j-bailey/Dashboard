@@ -21,10 +21,11 @@ body{
     background-color: #FDFFFC;
     width: 80px;
     height: 100vh;
-    opacity: 0.8;
+    opacity: 0.9;
     text-align: center;
     z-index: 2;
     transition: all .5s ease;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
 }
 
 .menuBarHover{
@@ -39,9 +40,9 @@ body{
 }
 
 #menuIconBottom{
-    position: relative;
-    top: Calc(90vh - 200px);
-    margin: 10px 0px 0px 0px !Important;
+    *position: relative;
+    *top: Calc(90vh - 100px);
+    *margin: 10px 0px 0px 0px !Important;
 }
 
 #foreground {
@@ -60,6 +61,7 @@ body{
     background-color: rgba(253, 255, 252, .9);
     color: #212121;
     transition: all .5s ease;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
 }
 
 .social-icon{
@@ -83,21 +85,55 @@ body{
 #greeting {
     color: rgba(253, 255, 252, .9);
     transition: all .5s ease;
+    text-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+    position: relative;
 }
 
 .locked {
     opacity: 0;
 }
 
+.gate {
+    display: none;
+}
+
 .lockdown {
-    background: #212121;
+    display: block;
+    background-color: rgba(10, 10, 10, 0.5);
+    color: white;
     position: absolute;
     top: 0px;
     left: 0px;
     width: 100vw;
     height: 100vh;
-    opacity: 0.8;
     z-index: 100;
     padding-top: 40vh;
     text-align: center;
+}
+
+#lock-message {
+    color: white;
+    margin-bottom: 12px;
+}
+.input {
+    width: 150px;
+}
+
+.lock-clock{
+    position: absolute;
+    bottom: 20px;
+    color: white;
+    width: 100%;
+}
+
+.slide-left {
+    transform: translate(-100px, 0px);
+}
+
+.slide-down {
+    transform: translate(0px, 15px);
+}
+
+#tool-buttons {
+    
 }

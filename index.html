@@ -17,7 +17,7 @@
                     // Access the "getMinutes" method with the dot accessor.
                     minutes = time.getMinutes(),
                     seconds = time.getSeconds();
-                document.querySelectorAll('#clock')[0].innerHTML = harold(hours)%12 + ":" + harold(minutes) + ":" + harold(seconds);
+                document.querySelectorAll("#clock")[0].innerHTML = harold(hours)%12 + ":" + harold(minutes) + ":" + harold(seconds);
                 function harold(standIn) {
                     if (standIn < 10) {
                         standIn = '0' + standIn
@@ -29,10 +29,12 @@
         </script>
     </head>
     <body>
-        <div class="lockdown">
+        <div class="gate" id="lockdown">
             <span class="icon is-large" onclick="toggleLock()">
                 <i class="fa fa-lock fa-3x"></i>
             </span>
+            <div class="subtitle" id="lock-message">Enter passcode to unlock:</div>
+            <input class="input">
         </div>
         <div id="background">
             <div class="menuBar" id="menuBar">
@@ -42,9 +44,6 @@
                 <p class="title is-7" id="dashboard">Dashboard</p>                
                 <span class="icon is-large" id="menuIconBottom" onclick="toggleLock()">
                     <i class="fa fa-lock fa-2x"></i>
-                </span>
-                <span class="icon is-large" id="menuIconBottom">
-                    <i class="fa fa-cog fa-2x"></i>
                 </span>
             </div>
             <div id="foreground">
@@ -170,8 +169,26 @@
                     </div>
                     <div class="tile is-parent" id="tile">
                         <article class="tile is-child box">
+                            <div class="buttons" id="tool-buttons">
+                                <span class="icon">
+                                    <i class="fa fa-plus fa-1x"></i>
+                                </span>
+                                <span class="icon">
+                                    <i class="fa fa-edit fa-1x"></i>
+                                </span>
+                            </div>
                             <p class="title">Reminders:</p>
-                            
+                            <div class="reminder-list">
+                                <article class="message is-dark">
+                                    <div class="message-header">
+                                        <p>Dark</p>
+                                        <button class="delete" aria-label="delete"></button>
+                                    </div>
+                                    <div class="message-body">
+                                        Sample Reminder Text.
+                                    </div>
+                                </article>
+                            </div>
                         </article>
                     </div>
                 </div>
@@ -179,7 +196,7 @@
         </div>
         <script>
             
-            
+            /*
             $("#menuBar").hover(
                 function(){
                     $("#menuBar").addClass('menuBarHover');
@@ -196,7 +213,7 @@
                     $("#greeting").removeClass('fade');
                 }
             );
-            
+            */
             
             function setDate(){
                 
