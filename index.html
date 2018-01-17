@@ -249,6 +249,10 @@
                 
                 var leapYear = ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0);
                 
+                if(leapYear){
+                    monthDays[1] = 29;
+                }
+                
                 var currMonth = false;
                 var dayOfMonth = 1;
                 for(i = 0; i < 35; i++){
@@ -267,7 +271,6 @@
                         }
                         dayOfMonth++;
                     }
-                    
                 }
             }
             
