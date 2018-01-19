@@ -12,11 +12,9 @@
         <script type="text/javascript" src="controller.js"></script>
         <script>
             
-            function clock() {// We create a new Date object and assign it to a variable called "time".
+            function clock() {
                 var time = new Date(),
-                    // Access the "getHours" method on the Date object with the dot accessor.
                     hours = time.getHours(),
-                    // Access the "getMinutes" method with the dot accessor.
                     minutes = time.getMinutes(),
                     seconds = time.getSeconds();
                 document.querySelectorAll("#clock")[0].innerHTML = harold(hours)%12 + ":" + harold(minutes) + ":" + harold(seconds);
@@ -219,26 +217,6 @@
             </div>
         </div>
         <script>
-            
-            /*
-            $("#menuBar").hover(
-                function(){
-                    $("#menuBar").addClass('menuBarHover');
-                    $("#dashboard").addClass('is-4');
-                    $("#dashboard").removeClass('is-7');
-                    $("article").addClass('fade');
-                    $("#greeting").addClass('fade');
-                },
-                function(){
-                    $("#menuBar").removeClass('menuBarHover');
-                    $("#dashboard").addClass('is-7');
-                    $("#dashboard").removeClass('is-4');
-                    $("article").removeClass('fade');
-                    $("#greeting").removeClass('fade');
-                }
-            );
-            */
-            
             function setDate(){
                 
                 var monthNames = ["January", "February", "March", "April", "May", "June",
