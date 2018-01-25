@@ -19,3 +19,14 @@ function completeReminder(reminder){
     document.getElementById(reminder).classList.add('is-success');
     document.getElementById(reminder).classList.remove('is-dark');
 }
+
+var statsActive = false;
+function launchStats(){
+    if(statsActive){
+        document.getElementById('statsModal').classList.remove('is-active');
+        statsActive = false;
+    } else {
+        document.getElementById('statsModal').classList.add('is-active');
+        statsActive = true;
+    }
+}

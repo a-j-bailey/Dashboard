@@ -10,6 +10,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.min.js"></script>
         <script type="text/javascript" src="controller.js"></script>
+        <script type="text/javascript" src="Chart.bundle.js"></script>
         <script>
             
             function clock() {
@@ -83,16 +84,6 @@
                                         <a href="" class="social-icon">
                                             <span class="icon is-large">
                                                 <i class="fa fa-telegram fa-3x"></i>
-                                            </span>
-                                        </a>
-                                        <a href="" class="social-icon">
-                                            <span class="icon is-large">
-                                                <i class="fa fa-question fa-3x"></i>
-                                            </span>
-                                        </a>
-                                        <a href="" class="social-icon">
-                                            <span class="icon is-large">
-                                                <i class="fa fa-question fa-3x"></i>
                                             </span>
                                         </a>
                                     </div>
@@ -184,6 +175,11 @@
                     <div class="tile is-parent" id="tile">
                         <article class="tile is-child box">
                             <div class="tool-buttons">
+                                <a onclick="launchStats()">
+                                    <span class="icon">
+                                        <i class="fa fa-area-chart fa-1x"></i>
+                                    </span>
+                                </a>
                                 <a>
                                     <span class="icon">
                                         <i class="fa fa-plus fa-1x"></i>
@@ -237,51 +233,21 @@
                                     </div>
                                 </article>
                                 <canvas id="myChart" width="400" height="400"></canvas>
-<script>
-var ctx = document.getElementById("myChart").getContext('2d');
-var myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-        datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255,99,132,1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero:true
-                }
-            }]
-        }
-    }
-});
-</script>
                             </div>
                         </article>
                     </div>
                 </div>
             </div>
         </div>
+        
+        <div id="statsModal" class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+                
+            </div>
+            <button class="modal-close is-large" aria-label="close" onclick="launchStats()"></button>
+        </div>
+        
         <script>
             function setDate(){
                 
