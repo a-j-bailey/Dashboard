@@ -14,3 +14,8 @@ function toggleLock(){
         lockedDown = true;
     }
 }
+
+function completeReminder(reminder){
+    document.getElementById(reminder).classList.add('is-success');
+    document.getElementById(reminder).classList.remove('is-dark');
+}
